@@ -6,7 +6,9 @@ from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 from sqlalchemy.exc import IntegrityError
 
 # ================== إعدادات ==================
-BOT_TOKEN = "8079685928:AAGUFTDfS851OwQHf8aQ5kZAFfYlb3NVYnM"
+import os
+
+BOT_TOKEN = os.getenv("TOKEN")  # الآن التوكن يُقرأ من متغير البيئة
 ADMIN_IDS = {833001594}  # ضع معرفات الإدمن هنا
 
 logging.basicConfig(
